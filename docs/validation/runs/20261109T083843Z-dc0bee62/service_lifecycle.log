@@ -1,0 +1,2 @@
+{"isolated_database": true, "managed_start": true, "idempotent_start": true, "graceful_stop": true, "static_frontend": true, "anonymous_ops_denied": true, "dependency_faults": {"redis": "isolated unreachable port", "mqtt": "isolated unreachable port"}, "readiness_http": 503, "liveness_http": 200, "json_logs_with_request_id": true, "passed": true}
+

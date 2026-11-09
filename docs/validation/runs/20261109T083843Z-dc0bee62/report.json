@@ -1,0 +1,76 @@
+{
+  "code_start_sha256": "f8676b1c95ac519e6682bce5fd92e45da7948c8132ea63d6255d5522697dff79",
+  "code_end_sha256": "f8676b1c95ac519e6682bce5fd92e45da7948c8132ea63d6255d5522697dff79",
+  "source_unchanged": true,
+  "run_id": "20261109T083843Z-dc0bee62",
+  "finished_at": "2026-11-09T08:40:25.057251+00:00",
+  "status": "passed",
+  "stages": [
+    {
+      "name": "frontend_build",
+      "status": "passed",
+      "duration_seconds": 16.14,
+      "log": "frontend_build.log",
+      "reason": ""
+    },
+    {
+      "name": "backend_regression",
+      "status": "passed",
+      "duration_seconds": 41.8,
+      "log": "backend_regression.log",
+      "reason": ""
+    },
+    {
+      "name": "protocol_faults",
+      "status": "passed",
+      "duration_seconds": 9.91,
+      "log": "protocol_faults.log",
+      "reason": ""
+    },
+    {
+      "name": "vision_process_recovery",
+      "status": "passed",
+      "duration_seconds": 9.81,
+      "log": "vision_process_recovery.log",
+      "reason": ""
+    },
+    {
+      "name": "service_lifecycle",
+      "status": "passed",
+      "duration_seconds": 14.28,
+      "log": "service_lifecycle.log",
+      "reason": ""
+    },
+    {
+      "name": "ros_components",
+      "status": "passed",
+      "duration_seconds": 8.28,
+      "log": "ros_components.log",
+      "reason": ""
+    }
+  ],
+  "ros_components_requested": true,
+  "historical_evidence": [
+    {
+      "file": "docs\\validation\\equipment-acceptance.json",
+      "sha256": "84b05c5aa9244c34eed300d358a5257a3cdff2e63c4e7660c83c89cacee53032"
+    },
+    {
+      "file": "docs\\validation\\alerts-live-acceptance.json",
+      "sha256": "83201cfaea20994511205e63b85e5adc7a5b3f50499fccdab76681c5821d62c8"
+    },
+    {
+      "file": "docs\\validation\\equipment-first-pass-missed-leak.json",
+      "sha256": "8cbdf6eb5679aabcb52ed65786811f1ce6e6ce4252484380689af8b9e7ecc6c5"
+    }
+  ],
+  "regression": {
+    "successful": true,
+    "tests_run": 117,
+    "failure_count": 0,
+    "error_count": 0,
+    "skipped_count": 0,
+    "failures": [],
+    "skipped": []
+  }
+}

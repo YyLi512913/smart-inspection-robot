@@ -1,0 +1,30 @@
+CREATE TABLE IF NOT EXISTS inspection_alert (
+ id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+ equipment_id VARCHAR(32) NOT NULL, equipment_name VARCHAR(80) NOT NULL,
+ observation_id VARCHAR(64) NOT NULL, observation_name VARCHAR(80) NOT NULL,
+ status VARCHAR(24) NOT NULL DEFAULT 'open', kind VARCHAR(24) NOT NULL,
+ occurrences INT NOT NULL DEFAULT 0, latest_task_no VARCHAR(32) NOT NULL,
+ latest_point_seq INT NOT NULL, summary VARCHAR(500) NOT NULL DEFAULT '',
+ created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+ updated_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3), closed_at DATETIME(3) NULL,
+ KEY idx_alert_status(status,updated_at), KEY idx_alert_equipment(equipment_id)
+) ENGINE=InnoDB;
+CREATE TABLE IF NOT EXISTS alert_slot (
+ observation_id VARCHAR(64) PRIMARY KEY, alert_id BIGINT UNSIGNED NULL
+) ENGINE=InnoDB;
+CREATE TABLE IF NOT EXISTS alert_result (
+ task_no VARCHAR(32) NOT NULL, point_seq INT NOT NULL, alert_id BIGINT UNSIGNED NULL,
+ PRIMARY KEY(task_no,point_seq)
+) ENGINE=InnoDB;
+CREATE TABLE IF NOT EXISTS alert_event (
+ id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY, alert_id BIGINT UNSIGNED NOT NULL,
+ action VARCHAR(32) NOT NULL, actor VARCHAR(64) NOT NULL, note VARCHAR(1000) NOT NULL DEFAULT '',
+ task_no VARCHAR(32) NULL, created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+ KEY idx_alert_event(alert_id,id)
+) ENGINE=InnoDB;
+CREATE TABLE IF NOT EXISTS alert_recheck (
+ id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY, alert_id BIGINT UNSIGNED NOT NULL,
+ task_no VARCHAR(32) NOT NULL UNIQUE, baseline INT NOT NULL,
+ outcome VARCHAR(24) NOT NULL DEFAULT 'pending', created_at DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+ KEY idx_alert_recheck(alert_id,id)
+) ENGINE=InnoDB;

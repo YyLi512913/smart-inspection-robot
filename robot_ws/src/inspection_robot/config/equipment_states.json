@@ -1,0 +1,20 @@
+{
+  "ELEC-001": {
+    "x": 3,
+    "y": -12,
+    "normal_model": "elec_001_normal",
+    "abnormal_model": "elec_001_abnormal"
+  },
+  "AIR-001": {
+    "x": 6,
+    "y": -12,
+    "normal_model": "air_001_normal",
+    "abnormal_model": "air_001_abnormal"
+  },
+  "PIPE-001": {
+    "x": 9,
+    "y": -12,
+    "normal_model": "pipe_001_normal",
+    "abnormal_model": "pipe_001_abnormal"
+  }
+}

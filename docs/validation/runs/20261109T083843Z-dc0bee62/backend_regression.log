@@ -1,0 +1,9 @@
+{"successful": true, "tests_run": 117, "failure_count": 0, "error_count": 0, "skipped_count": 0}
+
+...........................................................................................Rejected transition T20261109-212dbab853034393b310: DISPATCHED --task_done
+Rejected transition T20261109-212dbab853034393b310: DISPATCHED --point_arrived
+..........................
+----------------------------------------------------------------------
+Ran 117 tests in 38.246s
+
+OK

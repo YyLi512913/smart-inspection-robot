@@ -1,0 +1,239 @@
+{
+  "started_at": "2026-11-09T06:30:31.770Z",
+  "environment": "live Gazebo/Nav2 camera + MQTT + VLM + MySQL",
+  "baseline_tasks": 27,
+  "abnormal_task": "T20261109-63e8273c8a104255bf74",
+  "initial_low_battery_task": "T20261109-40e743d3b39948c5a672",
+  "alert": {
+    "id": 1,
+    "equipment_id": "AIR-001",
+    "equipment_name": "1号空压机压力表",
+    "observation_id": "obs_air001_gauge",
+    "observation_name": "压力表正面",
+    "status": "closed",
+    "kind": "abnormal",
+    "occurrences": 1,
+    "latest_task_no": "T20261109-63e8273c8a104255bf74",
+    "latest_point_seq": 1,
+    "summary": "压力读数：读数 1.2 MPa 超出 [0.2, 0.8] MPa",
+    "created_at": "2026-11-09T14:32:51.552000",
+    "updated_at": "2026-11-09T14:33:36.863000",
+    "closed_at": "2026-11-09T14:33:36.863000",
+    "events": [
+      {
+        "id": 1,
+        "alert_id": 1,
+        "action": "opened",
+        "actor": "system",
+        "note": "压力读数：读数 1.2 MPa 超出 [0.2, 0.8] MPa",
+        "task_no": "T20261109-63e8273c8a104255bf74",
+        "created_at": "2026-11-09T14:32:51.553000"
+      },
+      {
+        "id": 2,
+        "alert_id": 1,
+        "action": "confirm",
+        "actor": "巡检操作员",
+        "note": "仿真闭环验收：相机读取 1.20 MPa，高于上限 0.80 MPa，确认异常。",
+        "task_no": null,
+        "created_at": "2026-11-09T14:33:23.605000"
+      },
+      {
+        "id": 3,
+        "alert_id": 1,
+        "action": "resolve",
+        "actor": "巡检操作员",
+        "note": "仿真闭环验收：将压力表可见状态恢复为 0.45 MPa，准备通过现场相机复检验证。",
+        "task_no": null,
+        "created_at": "2026-11-09T14:33:25.603000"
+      },
+      {
+        "id": 4,
+        "alert_id": 1,
+        "action": "recheck_started",
+        "actor": "巡检操作员",
+        "note": "",
+        "task_no": "T20261109-4b128604058a4559abe2",
+        "created_at": "2026-11-09T14:33:29.647000"
+      },
+      {
+        "id": 5,
+        "alert_id": 1,
+        "action": "recheck_passed",
+        "actor": "system",
+        "note": "逐项正常，复检通过",
+        "task_no": "T20261109-4b128604058a4559abe2",
+        "created_at": "2026-11-09T14:33:36.864000"
+      }
+    ],
+    "rechecks": [
+      {
+        "id": 1,
+        "alert_id": 1,
+        "task_no": "T20261109-4b128604058a4559abe2",
+        "baseline": 1,
+        "outcome": "passed",
+        "created_at": "2026-11-09T14:33:29.645000",
+        "task_status": "DONE"
+      }
+    ],
+    "evidence": {
+      "task_no": "T20261109-63e8273c8a104255bf74",
+      "robot_id": "robot1",
+      "alert_id": 1,
+      "point_seq": 1,
+      "created_at": "2026-11-09T14:32:45.516000",
+      "place": "obs_air001_gauge",
+      "image_url": "/api/results/img/T20261109-63e8273c8a104255bf74_1_54ad1fdee38042f7b9bef7f83660c2a3.jpg",
+      "captured_at": 1794205965441,
+      "normal": 0,
+      "reading": "压力表读数显示为1.20 MPa，超出正常范围0.20至0.80 MPa。",
+      "anomaly": "压力读数：读数 1.2 MPa 超出 [0.2, 0.8] MPa",
+      "error": "",
+      "vlm_model": "deepseek-flash",
+      "image_source": "camera",
+      "capture_error": "",
+      "camera_stamp_ns": 55400000000,
+      "inspection": {
+        "yaw": -1.5707963267948966,
+        "area": "workshop",
+        "checks": [
+          {
+            "max": 0.8,
+            "min": 0.2,
+            "code": "pressure_reading",
+            "kind": "numeric",
+            "name": "压力读数",
+            "rule": "读取表盘或数字压力值，正常范围 0.20 至 0.80 MPa（含边界）；不能读清时必须标为 unreadable。",
+            "unit": "MPa"
+          }
+        ],
+        "equipment_id": "AIR-001",
+        "equipment_name": "1号空压机压力表",
+        "equipment_type": "pressure_gauge",
+        "observation_id": "obs_air001_gauge",
+        "observation_name": "压力表正面"
+      },
+      "equipment_id": "AIR-001",
+      "equipment_name": "1号空压机压力表",
+      "observation_name": "压力表正面",
+      "checks": [
+        {
+          "code": "pressure_reading",
+          "name": "压力读数",
+          "unit": "MPa",
+          "value": 1.2,
+          "status": "abnormal",
+          "evidence": "读数 1.2 MPa 超出 [0.2, 0.8] MPa"
+        }
+      ],
+      "review_required": false
+    }
+  },
+  "abnormal_result": {
+    "task_no": "T20261109-63e8273c8a104255bf74",
+    "robot_id": "robot1",
+    "alert_id": 1,
+    "point_seq": 1,
+    "created_at": "2026-11-09T14:32:45.516000",
+    "place": "obs_air001_gauge",
+    "image_url": "/api/results/img/T20261109-63e8273c8a104255bf74_1_54ad1fdee38042f7b9bef7f83660c2a3.jpg",
+    "captured_at": 1794205965441,
+    "normal": 0,
+    "reading": "压力表读数显示为1.20 MPa，超出正常范围0.20至0.80 MPa。",
+    "anomaly": "压力读数：读数 1.2 MPa 超出 [0.2, 0.8] MPa",
+    "error": "",
+    "vlm_model": "deepseek-flash",
+    "image_source": "camera",
+    "capture_error": "",
+    "camera_stamp_ns": 55400000000,
+    "inspection": {
+      "yaw": -1.5707963267948966,
+      "area": "workshop",
+      "checks": [
+        {
+          "max": 0.8,
+          "min": 0.2,
+          "code": "pressure_reading",
+          "kind": "numeric",
+          "name": "压力读数",
+          "rule": "读取表盘或数字压力值，正常范围 0.20 至 0.80 MPa（含边界）；不能读清时必须标为 unreadable。",
+          "unit": "MPa"
+        }
+      ],
+      "equipment_id": "AIR-001",
+      "equipment_name": "1号空压机压力表",
+      "equipment_type": "pressure_gauge",
+      "observation_id": "obs_air001_gauge",
+      "observation_name": "压力表正面"
+    },
+    "equipment_id": "AIR-001",
+    "equipment_name": "1号空压机压力表",
+    "observation_name": "压力表正面",
+    "checks": [
+      {
+        "code": "pressure_reading",
+        "name": "压力读数",
+        "unit": "MPa",
+        "value": 1.2,
+        "status": "abnormal",
+        "evidence": "读数 1.2 MPa 超出 [0.2, 0.8] MPa"
+      }
+    ],
+    "review_required": false
+  },
+  "recheck_task": "T20261109-4b128604058a4559abe2",
+  "recheck_result": {
+    "task_no": "T20261109-4b128604058a4559abe2",
+    "robot_id": "robot1",
+    "alert_id": 1,
+    "point_seq": 1,
+    "created_at": "2026-11-09T14:33:30.757000",
+    "place": "obs_air001_gauge",
+    "image_url": "/api/results/img/T20261109-4b128604058a4559abe2_1_1df7f14078f44277a2b656c795764717.jpg",
+    "captured_at": 1794206010659,
+    "normal": 1,
+    "reading": "压力表显示 0.45 MPa，在正常范围 0.20 至 0.80 MPa 内",
+    "anomaly": "",
+    "error": "",
+    "vlm_model": "deepseek-flash",
+    "image_source": "camera",
+    "capture_error": "",
+    "camera_stamp_ns": 100400000000,
+    "inspection": {
+      "yaw": -1.5707963267948966,
+      "area": "workshop",
+      "checks": [
+        {
+          "max": 0.8,
+          "min": 0.2,
+          "code": "pressure_reading",
+          "kind": "numeric",
+          "name": "压力读数",
+          "rule": "读取表盘或数字压力值，正常范围 0.20 至 0.80 MPa（含边界）；不能读清时必须标为 unreadable。",
+          "unit": "MPa"
+        }
+      ],
+      "equipment_id": "AIR-001",
+      "equipment_name": "1号空压机压力表",
+      "equipment_type": "pressure_gauge",
+      "observation_id": "obs_air001_gauge",
+      "observation_name": "压力表正面"
+    },
+    "equipment_id": "AIR-001",
+    "equipment_name": "1号空压机压力表",
+    "observation_name": "压力表正面",
+    "checks": [
+      {
+        "code": "pressure_reading",
+        "name": "压力读数",
+        "unit": "MPa",
+        "value": 0.45,
+        "status": "normal",
+        "evidence": "表盘数字显示 0.45 MPa，且指针指向约 0.45 MPa"
+      }
+    ],
+    "review_required": false
+  },
+  "finished_at": "2026-11-09T06:34:08.927Z"
+}

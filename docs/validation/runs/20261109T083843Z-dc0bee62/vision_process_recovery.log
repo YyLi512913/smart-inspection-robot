@@ -1,0 +1,2 @@
+{"scenario": "forced-process-kill-and-restart", "isolated_database": true, "classifier": "deterministic stub; not a visual accuracy test", "lease_seconds_in_test": 2, "production_lease_seconds": 60, "job_status": "succeeded", "attempts": 2, "old_worker_fenced": true, "result_rows": 1, "alert_rows": 1, "alert_occurrences": 1, "passed": true}
+

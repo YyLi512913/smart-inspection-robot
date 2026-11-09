@@ -1,0 +1,145 @@
+{
+  "scenario": "equipment-state-comparison",
+  "cases": [
+    {
+      "state": "normal",
+      "task_no": "T20261109-43541eaf6d5743e5a660",
+      "results": [
+        {
+          "equipment_id": "ELEC-001",
+          "image": "F:\\robot-inspection\\.tmp\\equipment-camera\\T20261109-43541eaf6d5743e5a660_1_97cfcf305ec14f379f0f736e4d624eba.jpg",
+          "observation": "柜门与状态灯",
+          "sha256": "b5a0ce0115f9eb81f061ca3a56da664539a81f21c03c238d5d89501e2a4f42c2",
+          "normal": 1,
+          "checks": [
+            {
+              "code": "door_closed",
+              "name": "柜门闭合",
+              "unit": "",
+              "value": null,
+              "status": "normal",
+              "evidence": "柜门面板与柜体边框平齐，门缝紧密，无可见打开或外露内部部件，门把手位于闭合位置。"
+            },
+            {
+              "code": "status_light",
+              "name": "状态指示灯",
+              "unit": "",
+              "value": null,
+              "status": "normal",
+              "evidence": "标识ELEC-001左下方可见圆形指示灯呈绿色亮起。"
+            }
+          ],
+          "error": ""
+        },
+        {
+          "equipment_id": "AIR-001",
+          "image": "F:\\robot-inspection\\.tmp\\equipment-camera\\T20261109-43541eaf6d5743e5a660_2_97cfcf305ec14f379f0f736e4d624eba.jpg",
+          "observation": "压力表正面",
+          "sha256": "e6913919f281ea203b1ebd4f3c8bca8ca8bfdb8321edef70645accb0cd0b36fb",
+          "normal": 1,
+          "checks": [
+            {
+              "code": "pressure_reading",
+              "name": "压力读数",
+              "unit": "MPa",
+              "value": 0.45,
+              "status": "normal",
+              "evidence": "表盘显示0.45 MPa，指针位于0.0与0.8之间；正常范围为0.20至0.80 MPa。"
+            }
+          ],
+          "error": ""
+        },
+        {
+          "equipment_id": "PIPE-001",
+          "image": "F:\\robot-inspection\\.tmp\\equipment-camera\\T20261109-43541eaf6d5743e5a660_3_97cfcf305ec14f379f0f736e4d624eba.jpg",
+          "observation": "接头与地面",
+          "sha256": "4f6b17f524949fa4ecbc1c309a55184d42d3892db5acc6245c9bdefd4163f4c3",
+          "normal": 1,
+          "checks": [
+            {
+              "code": "visible_leak",
+              "name": "可见积液",
+              "unit": "",
+              "value": null,
+              "status": "normal",
+              "evidence": "1号管路阀组下方及周围地面区域呈现均匀的浅色，无液体聚集、水渍或湿润反光痕迹。"
+            }
+          ],
+          "error": ""
+        }
+      ]
+    },
+    {
+      "state": "abnormal",
+      "task_no": "T20261109-60168e0b0de84c6ca522",
+      "results": [
+        {
+          "equipment_id": "ELEC-001",
+          "image": "F:\\robot-inspection\\.tmp\\equipment-camera\\T20261109-60168e0b0de84c6ca522_1_256ac74404c6423887bde29a05b74ae8.jpg",
+          "observation": "柜门与状态灯",
+          "sha256": "44e44ecbdccb439353bbbac23e63916ce2cca673294e4f0a59b1befc10d4c943",
+          "normal": 0,
+          "checks": [
+            {
+              "code": "door_closed",
+              "name": "柜门闭合",
+              "unit": "",
+              "value": null,
+              "status": "normal",
+              "evidence": "灰色柜门面板完整覆盖门框，与柜体边框贴合，未见开启缝隙。"
+            },
+            {
+              "code": "status_light",
+              "name": "状态指示灯",
+              "unit": "",
+              "value": null,
+              "status": "abnormal",
+              "evidence": "标牌ELEC-001左下方可见一个亮起的红色球形指示灯，非绿色。"
+            }
+          ],
+          "error": ""
+        },
+        {
+          "equipment_id": "AIR-001",
+          "image": "F:\\robot-inspection\\.tmp\\equipment-camera\\T20261109-60168e0b0de84c6ca522_2_256ac74404c6423887bde29a05b74ae8.jpg",
+          "observation": "压力表正面",
+          "sha256": "15ea8fd62ecf32e765bf3f68b4a0e4e9024268a24312644b3b245e3430c3919e",
+          "normal": 0,
+          "checks": [
+            {
+              "code": "pressure_reading",
+              "name": "压力读数",
+              "unit": "MPa",
+              "value": 1.2,
+              "status": "abnormal",
+              "evidence": "读数 1.2 MPa 超出 [0.2, 0.8] MPa"
+            }
+          ],
+          "error": ""
+        },
+        {
+          "equipment_id": "PIPE-001",
+          "image": "F:\\robot-inspection\\.tmp\\equipment-camera\\T20261109-60168e0b0de84c6ca522_3_256ac74404c6423887bde29a05b74ae8.jpg",
+          "observation": "接头与地面",
+          "sha256": "70084d2dac585822846731d11037c559c5ccf582774d7d80e26c02b9a4956ec2",
+          "normal": 1,
+          "checks": [
+            {
+              "code": "visible_leak",
+              "name": "可见积液",
+              "unit": "",
+              "value": null,
+              "status": "normal",
+              "evidence": "管路接头下方及周围区域未见明显的异常液滴或局部积液，底部为平整的蓝色平面。"
+            }
+          ],
+          "error": ""
+        }
+      ]
+    }
+  ],
+  "vlm": true,
+  "images_changed_for_all_devices": true,
+  "normal_case_passed": true,
+  "abnormal_case_detected": false
+}

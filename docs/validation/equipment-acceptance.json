@@ -1,0 +1,145 @@
+{
+  "scenario": "equipment-state-comparison",
+  "cases": [
+    {
+      "state": "normal",
+      "task_no": "T20261109-fc54ca0dc3b848a3a6fe",
+      "results": [
+        {
+          "equipment_id": "ELEC-001",
+          "image": "docs/assets/equipment/normal-ELEC-001.jpg",
+          "observation": "柜门与状态灯",
+          "sha256": "adbd3292609c035b396b01253702b98d4c8afb0107d510a3d0ecbe87becc5c92",
+          "normal": 1,
+          "checks": [
+            {
+              "code": "door_closed",
+              "name": "柜门闭合",
+              "unit": "",
+              "value": null,
+              "status": "normal",
+              "evidence": "柜门及门边缘与柜体齐平，无明显打开或虚掩的缝隙。"
+            },
+            {
+              "code": "status_light",
+              "name": "状态指示灯",
+              "unit": "",
+              "value": null,
+              "status": "normal",
+              "evidence": "柜体上方左侧可见一个圆形的绿色指示灯亮起，无红色报警灯。"
+            }
+          ],
+          "error": ""
+        },
+        {
+          "equipment_id": "AIR-001",
+          "image": "docs/assets/equipment/normal-AIR-001.jpg",
+          "observation": "压力表正面",
+          "sha256": "88af88c67e0810743a0265c32a0f3f4f8908b964465a4ffc47312c01e06df24f",
+          "normal": 1,
+          "checks": [
+            {
+              "code": "pressure_reading",
+              "name": "压力读数",
+              "unit": "MPa",
+              "value": 0.45,
+              "status": "normal",
+              "evidence": "表盘下方有清晰的数字显示'0.45 MPa'，且表盘指针指向0.45附近，处于0.20至0.80的正常范围内。"
+            }
+          ],
+          "error": ""
+        },
+        {
+          "equipment_id": "PIPE-001",
+          "image": "docs/assets/equipment/normal-PIPE-001.jpg",
+          "observation": "接头与地面",
+          "sha256": "b4cf97ec97317320567b1e13de6827f8dab735e4b2ab556e4f6acb3272fef059",
+          "normal": 1,
+          "checks": [
+            {
+              "code": "visible_leak",
+              "name": "可见积液",
+              "unit": "",
+              "value": null,
+              "status": "normal",
+              "evidence": "管路下方及周围地面呈现均匀的干燥状态，无液体反光或积聚痕迹。"
+            }
+          ],
+          "error": ""
+        }
+      ]
+    },
+    {
+      "state": "abnormal",
+      "task_no": "T20261109-0cd97aa981a2442c9ddc",
+      "results": [
+        {
+          "equipment_id": "ELEC-001",
+          "image": "docs/assets/equipment/abnormal-ELEC-001.jpg",
+          "observation": "柜门与状态灯",
+          "sha256": "75c6d8c3747305144b641505b7243c6659662578da85f4a85ea78ab9107cd502",
+          "normal": 0,
+          "checks": [
+            {
+              "code": "door_closed",
+              "name": "柜门闭合",
+              "unit": "",
+              "value": null,
+              "status": "normal",
+              "evidence": "柜门表面平整，与门框贴合，未见明显打开迹象。"
+            },
+            {
+              "code": "status_light",
+              "name": "状态指示灯",
+              "unit": "",
+              "value": null,
+              "status": "abnormal",
+              "evidence": "柜体左上方可见一个红色指示灯。"
+            }
+          ],
+          "error": ""
+        },
+        {
+          "equipment_id": "AIR-001",
+          "image": "docs/assets/equipment/abnormal-AIR-001.jpg",
+          "observation": "压力表正面",
+          "sha256": "3e10fe3f9cf71f46f3f22d4983e4bb771ee790f396eda1ba262b576fcb5dd8d9",
+          "normal": 0,
+          "checks": [
+            {
+              "code": "pressure_reading",
+              "name": "压力读数",
+              "unit": "MPa",
+              "value": 1.2,
+              "status": "abnormal",
+              "evidence": "读数 1.2 MPa 超出 [0.2, 0.8] MPa"
+            }
+          ],
+          "error": ""
+        },
+        {
+          "equipment_id": "PIPE-001",
+          "image": "docs/assets/equipment/abnormal-PIPE-001.jpg",
+          "observation": "接头与地面",
+          "sha256": "4a630193c5521b1974218b527a85e31cfd34488b155b4dfedff14c153d46d40d",
+          "normal": 0,
+          "checks": [
+            {
+              "code": "visible_leak",
+              "name": "可见积液",
+              "unit": "",
+              "value": null,
+              "status": "abnormal",
+              "evidence": "管路PIPE-001中间接头下方有蓝色液滴，且正下方的地面上存在大面积的蓝色积液。"
+            }
+          ],
+          "error": ""
+        }
+      ]
+    }
+  ],
+  "vlm": true,
+  "images_changed_for_all_devices": true,
+  "normal_case_passed": true,
+  "abnormal_case_detected": true
+}

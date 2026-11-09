@@ -1,0 +1,16 @@
+
+test_new_frame_is_saved_and_provenance_is_recorded (test_nav2_components.CameraTests.test_new_frame_is_saved_and_provenance_is_recorded) ... ok
+test_old_frame_is_not_used_and_timeout_is_explicit (test_nav2_components.CameraTests.test_old_frame_is_not_used_and_timeout_is_explicit) ... ok
+test_all_inspection_points_are_reachable_with_robot_clearance (test_nav2_components.MapConnectivityTests.test_all_inspection_points_are_reachable_with_robot_clearance) ... ok
+test_aborted_action_cannot_report_arrival (test_nav2_components.Nav2ActionTests.test_aborted_action_cannot_report_arrival) ... ok
+test_camera_failure_fails_task_without_reporting_success (test_nav2_components.Nav2ActionTests.test_camera_failure_fails_task_without_reporting_success) ... ok
+test_cancel_acceptance_does_not_release_before_terminal_result (test_nav2_components.Nav2ActionTests.test_cancel_acceptance_does_not_release_before_terminal_result) ... ok
+test_restart_queries_persisted_uuid_and_unknown_does_not_release (test_nav2_components.Nav2ActionTests.test_restart_queries_persisted_uuid_and_unknown_does_not_release) ... [WARN] [1794213624.109981721] [rcl.logging_rosout]: Publisher already registered for node name: 'task_runner'. If this is due to multiple nodes with the same name then all logs for the logger named 'task_runner' will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+ok
+test_second_executor_cannot_claim_same_robot_journal (test_nav2_components.Nav2ActionTests.test_second_executor_cannot_claim_same_robot_journal) ... ok
+test_success_waits_for_stopped_and_camera_result (test_nav2_components.Nav2ActionTests.test_success_waits_for_stopped_and_camera_result) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 2.258s
+
+OK

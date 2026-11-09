@@ -1,0 +1,30 @@
+{
+  "scenario": "cross-module-fault-drill",
+  "passed": true,
+  "checks": {
+    "offline_creation_blocked": true,
+    "disconnect_outbox_and_duplicate_command": true,
+    "photo_spool_survives_disconnect_and_journal_reopen": true,
+    "vision_retry_atomic_alert_and_numeric_rule": true,
+    "authenticated_treatment_recheck_and_close": true,
+    "cancel_confirmation_holds_ownership_and_blocks_late_patrol": true
+  },
+  "duration_seconds": 6.31,
+  "real_components": [
+    "HTTP authentication",
+    "MQTT broker and reconnect",
+    "MySQL transactions",
+    "SQLite journal"
+  ],
+  "simulated_components": [
+    "robot protocol peer; no navigation or physical motion",
+    "deterministic vision fixture; no paid model"
+  ],
+  "accelerated_test_clock": [
+    "retry available_at moved forward after first simulated model failure"
+  ],
+  "results": 2,
+  "alerts": 1,
+  "closed_alerts": 1,
+  "live_database_or_broker_modified": false
+}

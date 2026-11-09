@@ -1,0 +1,9 @@
+{
+  "robot_id": "robot1",
+  "source": "manual",
+  "priority": 5,
+  "created_by": "verify",
+  "points": [
+    {"place": "server_room", "x": 21.75, "y": -11.0, "check_item": "验证工厂样例图映射"}
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "navigation": "Nav2 NavigateToPose",
+  "patrol_completed": true,
+  "real_images": [
+    {
+      "place": "workshop",
+      "task_id": "T20261109-1a0c3c57d0084e9ea246",
+      "event_id": "7f8204d6a90350d8bc5abecf709e6d93",
+      "image_url": "/api/results/img/T20261109-1a0c3c57d0084e9ea246_1_8c26e07a7d574c7d9be69f920c8cb494.jpg",
+      "point_seq": 1,
+      "command_id": "8c26e07a7d574c7d9be69f920c8cb494",
+      "captured_at": 1794190311468,
+      "image_source": "camera",
+      "capture_error": "",
+      "camera_stamp_ns": 260400000000
+    }
+  ],
+  "cancel_during_navigation": true,
+  "database_isolated": true,
+  "vlm_calls_suppressed_for_test": false,
+  "vlm_results": [
+    {
+      "normal": 1,
+      "reading": "室内绿灰色设备箱，外观完好",
+      "anomaly": "",
+      "error": ""
+    }
+  ]
+}

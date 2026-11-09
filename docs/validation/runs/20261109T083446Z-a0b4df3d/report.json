@@ -1,0 +1,73 @@
+{
+  "run_id": "20261109T083446Z-a0b4df3d",
+  "finished_at": "2026-11-09T08:36:18.157986+00:00",
+  "status": "failed",
+  "stages": [
+    {
+      "name": "frontend_build",
+      "status": "passed",
+      "duration_seconds": 15.66,
+      "log": "frontend_build.log",
+      "reason": ""
+    },
+    {
+      "name": "backend_regression",
+      "status": "passed",
+      "duration_seconds": 41.86,
+      "log": "backend_regression.log",
+      "reason": ""
+    },
+    {
+      "name": "protocol_faults",
+      "status": "passed",
+      "duration_seconds": 10.09,
+      "log": "protocol_faults.log",
+      "reason": ""
+    },
+    {
+      "name": "vision_process_recovery",
+      "status": "passed",
+      "duration_seconds": 9.23,
+      "log": "vision_process_recovery.log",
+      "reason": ""
+    },
+    {
+      "name": "service_lifecycle",
+      "status": "passed",
+      "duration_seconds": 14.61,
+      "log": "service_lifecycle.log",
+      "reason": ""
+    },
+    {
+      "name": "ros_components",
+      "status": "failed",
+      "duration_seconds": 0.0,
+      "log": "ros_components.log",
+      "reason": "环境不可用或验收超时"
+    }
+  ],
+  "ros_components_requested": true,
+  "historical_evidence": [
+    {
+      "file": "docs\\validation\\equipment-acceptance.json",
+      "sha256": "84b05c5aa9244c34eed300d358a5257a3cdff2e63c4e7660c83c89cacee53032"
+    },
+    {
+      "file": "docs\\validation\\alerts-live-acceptance.json",
+      "sha256": "83201cfaea20994511205e63b85e5adc7a5b3f50499fccdab76681c5821d62c8"
+    },
+    {
+      "file": "docs\\validation\\equipment-first-pass-missed-leak.json",
+      "sha256": "8cbdf6eb5679aabcb52ed65786811f1ce6e6ce4252484380689af8b9e7ecc6c5"
+    }
+  ],
+  "regression": {
+    "successful": true,
+    "tests_run": 116,
+    "failure_count": 0,
+    "error_count": 0,
+    "skipped_count": 0,
+    "failures": [],
+    "skipped": []
+  }
+}

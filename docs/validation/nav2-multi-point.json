@@ -1,0 +1,33 @@
+{
+  "navigation": "Nav2 NavigateToPose",
+  "patrol_completed": true,
+  "real_images": [
+    {
+      "place": "corridor_west",
+      "task_id": "T20261109-c84496456f324e76af77",
+      "event_id": "497eb0ddd2225c14aa83a3bef14065a7",
+      "image_url": "/api/results/img/T20261109-c84496456f324e76af77_1_42ec1df1f955496eb4cc16b1d77a1f53.jpg",
+      "point_seq": 1,
+      "command_id": "42ec1df1f955496eb4cc16b1d77a1f53",
+      "captured_at": 1794190079643,
+      "image_source": "camera",
+      "capture_error": "",
+      "camera_stamp_ns": 28600000000
+    },
+    {
+      "place": "workshop",
+      "task_id": "T20261109-c84496456f324e76af77",
+      "event_id": "1087cf88f35057e0b51e55fbf5a48f80",
+      "image_url": "/api/results/img/T20261109-c84496456f324e76af77_2_42ec1df1f955496eb4cc16b1d77a1f53.jpg",
+      "point_seq": 2,
+      "command_id": "42ec1df1f955496eb4cc16b1d77a1f53",
+      "captured_at": 1794190103242,
+      "image_source": "camera",
+      "capture_error": "",
+      "camera_stamp_ns": 52200000000
+    }
+  ],
+  "cancel_during_navigation": true,
+  "database_isolated": true,
+  "vlm_calls_suppressed_for_test": true
+}

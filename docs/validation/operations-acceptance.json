@@ -1,0 +1,32 @@
+{
+  "isolated_database": true,
+  "managed_start": true,
+  "idempotent_start": true,
+  "graceful_stop": true,
+  "static_frontend": true,
+  "anonymous_ops_denied": true,
+  "dependency_faults": {
+    "redis": "isolated unreachable port",
+    "mqtt": "isolated unreachable port"
+  },
+  "readiness_http": 503,
+  "liveness_http": 200,
+  "json_logs_with_request_id": true,
+  "passed": true,
+  "backend_tests": 110,
+  "local_deployment": {
+    "port": 8010,
+    "previous_port_preserved_for_other_project": 8000,
+    "managed": true,
+    "ready": true,
+    "tasks_preserved": 30,
+    "existing_users_preserved": 1
+  },
+  "browser": {
+    "admin_status_page": true,
+    "dependencies_healthy": true,
+    "workers_healthy": true,
+    "robot_online": true,
+    "horizontal_overflow": false
+  }
+}

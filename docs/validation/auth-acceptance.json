@@ -1,0 +1,19 @@
+{
+  "backend_tests": 94,
+  "frontend_build": "passed with existing chunk-size warning",
+  "http_tests": "real ASGI server + isolated MySQL",
+  "browser": {
+    "environment": "isolated database and built frontend",
+    "steps": [
+      "first-admin setup",
+      "create viewer account",
+      "logout",
+      "viewer login",
+      "equipment view",
+      "write controls hidden",
+      "admin navigation hidden"
+    ],
+    "passed": true
+  },
+  "production_bootstrap": "no default accounts; user sets first administrator password"
+}

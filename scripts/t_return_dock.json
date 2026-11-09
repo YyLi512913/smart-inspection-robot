@@ -1,0 +1,9 @@
+{
+  "robot_id": "robot1",
+  "source": "manual",
+  "priority": 5,
+  "created_by": "verify",
+  "points": [
+    {"place": "tinyRobot1_charger", "x": 2.0, "y": -3.0, "check_item": "回桩充电"}
+  ]
+}

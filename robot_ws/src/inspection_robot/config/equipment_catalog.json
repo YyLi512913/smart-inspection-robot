@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "equipment": [
+    {
+      "id": "ELEC-001",
+      "name": "1号控制柜",
+      "type": "control_cabinet",
+      "area": "workshop",
+      "model": {
+        "x": 3,
+        "y": -12,
+        "width": 1,
+        "depth": 0.6
+      },
+      "observations": [
+        {
+          "id": "obs_elec001_front",
+          "name": "柜门与状态灯",
+          "x": 3,
+          "y": -9.8,
+          "yaw": -1.5707963267948966,
+          "checks": [
+            {
+              "code": "door_closed",
+              "name": "柜门闭合",
+              "kind": "visual",
+              "rule": "柜门必须完全闭合；明显打开为异常。",
+              "expected": "closed"
+            },
+            {
+              "code": "status_light",
+              "name": "状态指示灯",
+              "kind": "visual",
+              "rule": "绿色运行灯为正常；红色报警灯为异常。",
+              "expected": "green"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AIR-001",
+      "name": "1号空压机压力表",
+      "type": "pressure_gauge",
+      "area": "workshop",
+      "model": {
+        "x": 6,
+        "y": -12,
+        "width": 1.2,
+        "depth": 0.8
+      },
+      "observations": [
+        {
+          "id": "obs_air001_gauge",
+          "name": "压力表正面",
+          "x": 6,
+          "y": -9.8,
+          "yaw": -1.5707963267948966,
+          "checks": [
+            {
+              "code": "pressure_reading",
+              "name": "压力读数",
+              "kind": "numeric",
+              "rule": "读取表盘或数字压力值，正常范围 0.20 至 0.80 MPa（含边界）；不能读清时必须标为 unreadable。",
+              "min": 0.2,
+              "max": 0.8,
+              "unit": "MPa"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PIPE-001",
+      "name": "1号管路阀组",
+      "type": "pipe",
+      "area": "workshop",
+      "model": {
+        "x": 9,
+        "y": -12,
+        "width": 1.6,
+        "depth": 0.8
+      },
+      "observations": [
+        {
+          "id": "obs_pipe001_joint",
+          "name": "接头与地面",
+          "x": 9,
+          "y": -9,
+          "yaw": -1.5707963267948966,
+          "checks": [
+            {
+              "code": "visible_leak",
+              "name": "可见积液",
+              "kind": "visual",
+              "rule": "管路接头下方及周围地面应干燥；明确可见的积液为异常。无法判断时标为 unreadable。",
+              "expected": "dry"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
